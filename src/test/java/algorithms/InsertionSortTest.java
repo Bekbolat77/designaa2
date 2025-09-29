@@ -8,7 +8,7 @@ import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class InsertionSortTest {   // ← public class болу керек
+public class InsertionSortTest {   
 
     private final SortAlgorithm algo = new InsertionSort();
 
