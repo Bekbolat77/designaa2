@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         int[] data = {5, 2, 9, 1, 5, 6};
 
-        SortAlgorithm algo = new InsertionSort(); // немесе new SelectionSort()
+        SortAlgorithm algo = new InsertionSort(); 
         PerformanceTracker t = new PerformanceTracker();
 
         t.start();
