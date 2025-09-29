@@ -19,7 +19,7 @@ public class BenchmarkRunner {
         String csvFile = "benchmark_results.csv";
 
         try (FileWriter writer = new FileWriter(csvFile)) {
-            // ✅ CSV Header
+            
             writer.write("Algorithm,n,Time(ms),Comparisons,Swaps,Accesses\n");
 
             for (SortAlgorithm algo : algorithms) {
@@ -36,11 +36,11 @@ public class BenchmarkRunner {
 
                     double elapsedMs = (end - start) / 1_000_000.0;
 
-                    // ✅ Консольге шығару
+                    
                     System.out.printf("n=%-7d  time=%.3f ms  compares=%d  swaps=%d  accesses=%d%n",
                             n, elapsedMs, tracker.getComparisons(), tracker.getSwaps(), tracker.getAccesses());
 
-                    // ✅ CSV-ге жазу
+                    
                     writer.write(String.format("%s,%d,%.3f,%d,%d,%d\n",
                             algo.name(), n, elapsedMs, tracker.getComparisons(),
                             tracker.getSwaps(), tracker.getAccesses()));
